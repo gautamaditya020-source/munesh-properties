@@ -36,6 +36,8 @@
   nav a:hover{color:var(--gold)}
   .nav-call{background:linear-gradient(135deg,var(--gold),#b8952e);color:#111;font-weight:700;padding:10px 20px;border-radius:50px;font-size:.9rem;box-shadow:0 4px 18px rgba(212,175,55,.35);transition:.2s}
   .nav-call:hover{transform:translateY(-2px);color:#111}
+  .lang-btn{background:transparent;border:1.5px solid rgba(212,175,55,.55);color:var(--gold2);font-weight:700;padding:8px 16px;border-radius:50px;font-size:.85rem;cursor:pointer;transition:.2s;font-family:inherit;margin-left:12px}
+  .lang-btn:hover{background:rgba(212,175,55,.15)}
   .menu-btn{display:none;background:none;border:1px solid rgba(212,175,55,.4);color:var(--gold);font-size:1.4rem;border-radius:8px;padding:4px 12px;cursor:pointer}
 
   /* ---------- HERO ---------- */
@@ -272,6 +274,7 @@
       </ul>
     </nav>
     <a class="nav-call" href="tel:+919675228696">📞 Call Now</a>
+    <button class="lang-btn" id="langBtn" onclick="setLang(siteLang==='en'?'hi':'en')" aria-label="Change language">EN</button>
     <button class="menu-btn" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
   </div>
 </header>
@@ -281,14 +284,14 @@
   <div class="container">
     <div>
       <span class="badge">✦ Genuine Deals · Clear Paperwork</span>
-      <h1>Aligarh se Noida tak — <span>Plot &amp; Property</span> Sahi Daam Mein</h1>
-      <p class="sub">Aligarh, Pari Chowk (Greater Noida), Jewar aur Yamuna Expressway belt mein residential plots, society plots aur buy/sell deals. Noida International Airport ke aas-paas invest karne ka sabse sahi waqt — 100% verified properties, registry tak full support.</p>
+      <h1 data-en="From Aligarh to Noida — <span>Plots &amp; Property</span> at the Right Price">Aligarh se Noida tak — <span>Plot &amp; Property</span> Sahi Daam Mein</h1>
+      <p class="sub" data-en="Residential plots, society plots and buy/sell deals across Aligarh, Pari Chowk (Greater Noida), Jewar and the Yamuna Expressway belt. The right time to invest near Noida International Airport — 100% verified properties, full support till registry.">Aligarh, Pari Chowk (Greater Noida), Jewar aur Yamuna Expressway belt mein residential plots, society plots aur buy/sell deals. Noida International Airport ke aas-paas invest karne ka sabse sahi waqt — 100% verified properties, registry tak full support.</p>
       <div class="hero-btns">
         <a class="btn btn-wa" href="https://wa.me/919675228696?text=Namaste!%20Mujhe%20plot%2Fproperty%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35M12.05 21.6h-.01a9.6 9.6 0 0 1-4.89-1.34l-.35-.2-3.63.95.97-3.54-.23-.36a9.57 9.57 0 0 1-1.47-5.11c0-5.3 4.31-9.6 9.62-9.6a9.55 9.55 0 0 1 6.8 2.82 9.55 9.55 0 0 1 2.81 6.8c0 5.3-4.31 9.6-9.61 9.6m8.18-17.78A11.5 11.5 0 0 0 12.05 0C5.71 0 .55 5.16.54 11.5c0 2.03.53 4.01 1.54 5.75L.44 24l6.9-1.81a11.5 11.5 0 0 0 4.7 1.01h.01c6.34 0 11.5-5.16 11.5-11.5 0-3.07-1.19-5.96-3.32-8.13"/></svg>
-          WhatsApp Karein
+          <span data-en="WhatsApp Us">WhatsApp Karein</span>
         </a>
-        <a class="btn btn-outline" href="#listings">Properties Dekhein →</a>
+        <a class="btn btn-outline" href="#listings" data-en="View Properties →">Properties Dekhein →</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><b>500+</b><span>Plots Sold</span></div>
@@ -319,7 +322,7 @@
 <!-- ================= AREAS STRIP ================= -->
 <div class="areas">
   <div class="container">
-    <div class="label">✦ Hamare Working Areas ✦</div>
+    <div class="label" data-en="✦ Our Working Areas ✦">✦ Hamare Working Areas ✦</div>
     <div class="chip-row">
       <a class="chip" href="#contact">📍 Aligarh</a>
       <a class="chip" href="#contact">📍 Pari Chowk, Greater Noida</a>
@@ -338,98 +341,98 @@
 <section class="services" id="services">
   <div class="container">
     <div class="sec-head">
-      <span class="badge">Hamari Services</span>
-      <h2>Property ka Har Kaam, <span class="gold">Ek Hi Jagah</span></h2>
-      <p>Plot dhundna ho ya apni property bechni ho — hum end-to-end help karte hain.</p>
+      <span class="badge" data-en="Our Services">Hamari Services</span>
+      <h2 data-en='Every Property Need, <span class="gold">One Trusted Place</span>'>Property ka Har Kaam, <span class="gold">Ek Hi Jagah</span></h2>
+      <p data-en="Buying a plot or selling your property — we help end to end.">Plot dhundna ho ya apni property bechni ho — hum end-to-end help karte hain.</p>
     </div>
     <div class="svc-grid">
       <div class="svc">
         <div class="ico">📐</div>
         <h3>Residential Plots</h3>
-        <p>Society area mein verified residential plots — clear title, boundary marked, registry ready. Har budget ke liye options.</p>
+        <p data-en="Verified residential plots in society areas — clear title, boundary marked, registry ready. Options for every budget.">Society area mein verified residential plots — clear title, boundary marked, registry ready. Har budget ke liye options.</p>
         <details>
-          <summary>Aur detail dekhein</summary>
+          <summary data-en="View more details">Aur detail dekhein</summary>
           <ul>
-            <li>Size: 50 se 500 sq. yd. tak — har budget ke liye</li>
-            <li>Title aur naksha pehle verify hota hai</li>
-            <li>Boundary demarcation karke plot dikhaya jata hai</li>
-            <li>Likhit agreement ke saath deal — fraud ki koi gunjaish nahi</li>
-            <li>Free site visit, phir registry tak full support</li>
+            <li data-en="Sizes from 50 to 500 sq. yd. — for every budget">Size: 50 se 500 sq. yd. tak — har budget ke liye</li>
+            <li data-en="Title and site map verified beforehand">Title aur naksha pehle verify hota hai</li>
+            <li data-en="Plot shown with boundary demarcation">Boundary demarcation karke plot dikhaya jata hai</li>
+            <li data-en="Written agreement with every deal — zero scope for fraud">Likhit agreement ke saath deal — fraud ki koi gunjaish nahi</li>
+            <li data-en="Free site visit, then full support till registry">Free site visit, phir registry tak full support</li>
           </ul>
         </details>
       </div>
       <div class="svc">
         <div class="ico">🏘️</div>
         <h3>Society Area Plots</h3>
-        <p>Gated societies aur developing colonies mein prime location plots. Road, bijli, paani — sab facilities ke saath.</p>
+        <p data-en="Prime-location plots in gated societies and developing colonies. Road, electricity, water — all facilities included.">Gated societies aur developing colonies mein prime location plots. Road, bijli, paani — sab facilities ke saath.</p>
         <details>
-          <summary>Aur detail dekhein</summary>
+          <summary data-en="View more details">Aur detail dekhein</summary>
           <ul>
-            <li>Approved layout wali societies — naksha pass</li>
-            <li>Road, bijli, paani, sewer line — sab facilities</li>
-            <li>Possession timeline pehle clear batayi jaati hai</li>
-            <li>Resale aur rental value ki bhi jaankari</li>
-            <li>Aligarh, Khair, Jattari, Gonda, Iglas se Noida tak options</li>
+            <li data-en="Societies with approved, sanctioned layouts">Approved layout wali societies — naksha pass</li>
+            <li data-en="Road, electricity, water, sewer — all facilities">Road, bijli, paani, sewer line — sab facilities</li>
+            <li data-en="Possession timeline made clear upfront">Possession timeline pehle clear batayi jaati hai</li>
+            <li data-en="Guidance on resale and rental value too">Resale aur rental value ki bhi jaankari</li>
+            <li data-en="Options from Aligarh, Khair, Jattari, Gonda, Iglas to Noida">Aligarh, Khair, Jattari, Gonda, Iglas se Noida tak options</li>
           </ul>
         </details>
       </div>
       <div class="svc">
         <div class="ico">🤝</div>
         <h3>Property Buy / Sell</h3>
-        <p>Ghar, plot ya zameen kharidni ho ya bechni — hum best market rate dilwate hain, bina kisi jhanjhat ke.</p>
+        <p data-en="Buying or selling a house, plot or land — we get you the best market rate, hassle-free.">Ghar, plot ya zameen kharidni ho ya bechni — hum best market rate dilwate hain, bina kisi jhanjhat ke.</p>
         <details>
-          <summary>Aur detail dekhein</summary>
+          <summary data-en="View more details">Aur detail dekhein</summary>
           <ul>
-            <li>Free market valuation — sahi rate ki jaankari</li>
-            <li>Genuine buyers/sellers se hi milwate hain</li>
-            <li>Har deal par likhit contract sign hota hai</li>
-            <li>Commission property ke according FIX — contract mein note</li>
-            <li>Token se registry tak, har step par saath</li>
+            <li data-en="Free market valuation — know the right rate">Free market valuation — sahi rate ki jaankari</li>
+            <li data-en="We connect you only with genuine buyers/sellers">Genuine buyers/sellers se hi milwate hain</li>
+            <li data-en="A written contract is signed for every deal">Har deal par likhit contract sign hota hai</li>
+            <li data-en="Commission FIXED as per property — noted in contract">Commission property ke according FIX — contract mein note</li>
+            <li data-en="From token to registry, with you at every step">Token se registry tak, har step par saath</li>
           </ul>
         </details>
       </div>
       <div class="svc">
         <div class="ico">📄</div>
         <h3>Documentation Support</h3>
-        <p>Registry, mutation (dakhil-kharij), NOC — saari paperwork mein full guidance aur support.</p>
+        <p data-en="Registry, mutation, NOC — full guidance and support with all paperwork.">Registry, mutation (dakhil-kharij), NOC — saari paperwork mein full guidance aur support.</p>
         <details>
-          <summary>Aur detail dekhein</summary>
+          <summary data-en="View more details">Aur detail dekhein</summary>
           <ul>
-            <li>Title search aur document verification pehle</li>
-            <li>Agreement drafting — T&amp;C sab likhit mein</li>
-            <li>Stamp duty &amp; registration ka sahi calculation</li>
-            <li>Registry ke baad mutation (dakhil-kharij) mein help</li>
-            <li>Sab kuch sarkari process se — 100% legal</li>
+            <li data-en="Title search and document verification first">Title search aur document verification pehle</li>
+            <li data-en="Agreement drafting — all T&amp;C in writing">Agreement drafting — T&amp;C sab likhit mein</li>
+            <li data-en="Accurate stamp duty &amp; registration calculation">Stamp duty &amp; registration ka sahi calculation</li>
+            <li data-en="Help with mutation after registry">Registry ke baad mutation (dakhil-kharij) mein help</li>
+            <li data-en="Everything via official process — 100% legal">Sab kuch sarkari process se — 100% legal</li>
           </ul>
         </details>
       </div>
       <div class="svc">
         <div class="ico">💰</div>
         <h3>Investment Guidance</h3>
-        <p>Kaunsa area grow karega, kahan invest karna sahi hai — 15+ saal ke experience ke saath sahi salah.</p>
+        <p data-en="Which area will grow, where to invest — honest advice backed by 15+ years of experience.">Kaunsa area grow karega, kahan invest karna sahi hai — 15+ saal ke experience ke saath sahi salah.</p>
         <details>
-          <summary>Aur detail dekhein</summary>
+          <summary data-en="View more details">Aur detail dekhein</summary>
           <ul>
-            <li>Jewar airport, Film City, Defence Corridor — growth areas ki analysis</li>
-            <li>Aapke budget ke hisaab se sahi area ka chunaav</li>
-            <li>Short-term vs long-term investment ki salah</li>
-            <li>Exit strategy — kab bechna sahi rahega</li>
-            <li>Koi pressure nahi, sirf honest advice</li>
+            <li data-en="Analysis of growth areas — Jewar airport, Film City, Defence Corridor">Jewar airport, Film City, Defence Corridor — growth areas ki analysis</li>
+            <li data-en="Right area selection as per your budget">Aapke budget ke hisaab se sahi area ka chunaav</li>
+            <li data-en="Short-term vs long-term investment advice">Short-term vs long-term investment ki salah</li>
+            <li data-en="Exit strategy — when it's right to sell">Exit strategy — kab bechna sahi rahega</li>
+            <li data-en="No pressure, only honest advice">Koi pressure nahi, sirf honest advice</li>
           </ul>
         </details>
       </div>
       <div class="svc">
         <div class="ico">🔍</div>
         <h3>Site Visit Free</h3>
-        <p>Pasand ki property ka free site visit. Khud dekhein, samjhein, phir decide karein — koi pressure nahi.</p>
+        <p data-en="Free site visit for any property you like. See it yourself, understand, then decide — no pressure.">Pasand ki property ka free site visit. Khud dekhein, samjhein, phir decide karein — koi pressure nahi.</p>
         <details>
-          <summary>Aur detail dekhein</summary>
+          <summary data-en="View more details">Aur detail dekhein</summary>
           <ul>
-            <li>Visit ka koi charge nahi — bilkul free</li>
-            <li>Timing: roz subah 10 baje se shaam 5 baje tak</li>
-            <li>Ek hi din mein 2-3 plots compare kar sakte hain</li>
-            <li>Boundary, road, bijli-paani sab khud check karein</li>
-            <li>WhatsApp par time book karein: 9675228696</li>
+            <li data-en="No charge for visits — completely free">Visit ka koi charge nahi — bilkul free</li>
+            <li data-en="Timing: daily 10 AM to 5 PM">Timing: roz subah 10 baje se shaam 5 baje tak</li>
+            <li data-en="Compare 2-3 plots in a single day">Ek hi din mein 2-3 plots compare kar sakte hain</li>
+            <li data-en="Check boundary, road and utilities yourself">Boundary, road, bijli-paani sab khud check karein</li>
+            <li data-en="Book your slot on WhatsApp: 9675228696">WhatsApp par time book karein: 9675228696</li>
           </ul>
         </details>
       </div>
@@ -442,19 +445,19 @@
   <div class="container">
     <div class="sec-head">
       <span class="badge">Featured Properties</span>
-      <h2>Aaj ke <span class="gold">Best Deals</span></h2>
-      <p>Yeh sample listings hain — latest available plots ke liye WhatsApp par message karein.</p>
+      <h2 data-en='Today&apos;s <span class="gold">Best Deals</span>'>Aaj ke <span class="gold">Best Deals</span></h2>
+      <p data-en="These are sample listings — WhatsApp us for the latest available plots.">Yeh sample listings hain — latest available plots ke liye WhatsApp par message karein.</p>
     </div>
     <div class="list-grid">
 
       <div class="card">
         <div class="thumb">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Agricultural_land_in_Bada_Gaon.jpg/960px-Agricultural_land_in_Bada_Gaon.jpg" alt="Open plot land near Jewar" loading="lazy">
-          <span class="tag">Airport Ke Paas</span>
+          <span class="tag" data-en="Near Airport">Airport Ke Paas</span>
         </div>
         <div class="body">
           <h3>Residential Plot — 100 Sq. Yd.</h3>
-          <div class="loc">📍 Jewar — Noida Intl. Airport ke paas</div>
+          <div class="loc" data-en="📍 Jewar — near Noida Intl. Airport">📍 Jewar — Noida Intl. Airport ke paas</div>
           <div class="feats"><span>✈️ Airport 10 min</span><span>✅ Clear Title</span><span>🛣️ 30 ft Road</span></div>
           <div class="price-row">
             <span class="price">₹12 Lakh</span>
@@ -466,7 +469,7 @@
       <div class="card">
         <div class="thumb">
           <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=75" alt="Beautiful independent house" loading="lazy">
-          <span class="tag">Makaan</span>
+          <span class="tag" data-en="House">Makaan</span>
         </div>
         <div class="body">
           <h3>2 BHK Independent House</h3>
@@ -497,7 +500,7 @@
 
     </div>
     <div style="text-align:center;margin-top:40px">
-      <a class="btn btn-gold" href="https://wa.me/919675228696?text=Mujhe%20available%20plots%20ki%20puri%20list%20chahiye" target="_blank" rel="noopener">📋 Puri List WhatsApp Par Mangayein</a>
+      <a class="btn btn-gold" href="https://wa.me/919675228696?text=Mujhe%20available%20plots%20ki%20puri%20list%20chahiye" target="_blank" rel="noopener" data-en="📋 Get the Full List on WhatsApp">📋 Puri List WhatsApp Par Mangayein</a>
     </div>
   </div>
 </section>
@@ -507,8 +510,8 @@
   <div class="container">
     <div class="sec-head">
       <span class="badge">Property Gallery</span>
-      <h2>Ek Jhalak — <span class="gold">Hamari Properties</span></h2>
-      <p>Pari Chowk se Jewar Airport tak, Aligarh se Yamuna Expressway tak — hamare working areas ki ek jhalak.</p>
+      <h2 data-en='A Glimpse — <span class="gold">Our Properties</span>'>Ek Jhalak — <span class="gold">Hamari Properties</span></h2>
+      <p data-en="From Pari Chowk to Jewar Airport, Aligarh to Yamuna Expressway — a glimpse of our working areas.">Pari Chowk se Jewar Airport tak, Aligarh se Yamuna Expressway tak — hamare working areas ki ek jhalak.</p>
     </div>
     <div class="gal-grid">
       <div class="gal-item wide">
@@ -543,26 +546,26 @@
 <section class="why" id="why">
   <div class="container">
     <div class="sec-head">
-      <span class="badge">Bharosa Ka Naam</span>
-      <h2>Log Humein Kyun <span class="gold">Choose Karte Hain</span></h2>
+      <span class="badge" data-en="A Name You Can Trust">Bharosa Ka Naam</span>
+      <h2 data-en='Why People <span class="gold">Choose Us</span>'>Log Humein Kyun <span class="gold">Choose Karte Hain</span></h2>
     </div>
     <div class="why-grid">
-      <div class="why-item"><span class="num">01</span><div><h4>100% Verified Properties</h4><p>Har plot ka title, naksha aur documents pehle check hote hain.</p></div></div>
-      <div class="why-item"><span class="num">02</span><div><h4>No Hidden Charges</h4><p>Jo rate bataya, wahi final. Transparent dealing, koi surprise nahi.</p></div></div>
-      <div class="why-item"><span class="num">03</span><div><h4>Registry Tak Saath</h4><p>Token se lekar registry tak, har step par hum aapke saath.</p></div></div>
-      <div class="why-item"><span class="num">04</span><div><h4>Local Market Expert</h4><p>Aligarh se Greater Noida tak har area ka rate aur future growth hum jaante hain.</p></div></div>
-      <div class="why-item"><span class="num">05</span><div><h4>Free Site Visit</h4><p>Property dekhne ka koi charge nahi. Aaram se dekho, phir socho.</p></div></div>
-      <div class="why-item"><span class="num">06</span><div><h4>After-Sale Support</h4><p>Deal ke baad bhi mutation, possession — har kaam mein help.</p></div></div>
+      <div class="why-item"><span class="num">01</span><div><h4>100% Verified Properties</h4><p data-en="Every plot's title, map and documents are checked first.">Har plot ka title, naksha aur documents pehle check hote hain.</p></div></div>
+      <div class="why-item"><span class="num">02</span><div><h4>No Hidden Charges</h4><p data-en="The rate we quote is final. Transparent dealing, no surprises.">Jo rate bataya, wahi final. Transparent dealing, koi surprise nahi.</p></div></div>
+      <div class="why-item"><span class="num">03</span><div><h4 data-en="With You Till Registry">Registry Tak Saath</h4><p data-en="From token to registry, we're with you at every step.">Token se lekar registry tak, har step par hum aapke saath.</p></div></div>
+      <div class="why-item"><span class="num">04</span><div><h4>Local Market Expert</h4><p data-en="From Aligarh to Greater Noida — we know every area's rates and future growth.">Aligarh se Greater Noida tak har area ka rate aur future growth hum jaante hain.</p></div></div>
+      <div class="why-item"><span class="num">05</span><div><h4>Free Site Visit</h4><p data-en="No charge for viewing properties. Take your time, then decide.">Property dekhne ka koi charge nahi. Aaram se dekho, phir socho.</p></div></div>
+      <div class="why-item"><span class="num">06</span><div><h4>After-Sale Support</h4><p data-en="Even after the deal — help with mutation, possession, everything.">Deal ke baad bhi mutation, possession — har kaam mein help.</p></div></div>
     </div>
 
     <div class="trust" id="trust">
-      <h3>🛡️ Registered Company — <span class="gold">100% Legal &amp; Transparent Kaam</span></h3>
-      <p class="tp">Hamari company property ke kaam ke liye register hai — isliye har deal likhit aur pukhta hoti hai.</p>
+      <h3 data-en='🛡️ Registered Company — <span class="gold">100% Legal &amp; Transparent Work</span>'>🛡️ Registered Company — <span class="gold">100% Legal &amp; Transparent Kaam</span></h3>
+      <p class="tp" data-en="Our company is registered for property business — so every deal is documented and secure.">Hamari company property ke kaam ke liye register hai — isliye har deal likhit aur pukhta hoti hai.</p>
       <div class="trust-grid">
-        <div class="trust-item"><span class="t-ico">🏢</span><div><b>Registered Company</b><span>Hum is kaam ke liye registered hain — bhagoda broker nahi, jawabdeh company.</span></div></div>
-        <div class="trust-item"><span class="t-ico">📝</span><div><b>Likhit Contract Sign Hota Hai</b><span>Har deal se pehle written agreement — taaki fraud ki koi gunjaish hi na rahe.</span></div></div>
-        <div class="trust-item"><span class="t-ico">📄</span><div><b>Terms &amp; Conditions Apply</b><span>Har deal par T&amp;C laagu hoti hain — sab kuch pehle likhit mein, koi zubaani waada nahi.</span></div></div>
-        <div class="trust-item"><span class="t-ico">💰</span><div><b>Commission FIX — Contract Mein Note</b><span>Commission property ke according fix hota hai aur contract ki conditions mein likha jata hai. Fully transparent.</span></div></div>
+        <div class="trust-item"><span class="t-ico">🏢</span><div><b>Registered Company</b><span data-en="We are registered for this business — an accountable company, not a fly-by-night broker.">Hum is kaam ke liye registered hain — bhagoda broker nahi, jawabdeh company.</span></div></div>
+        <div class="trust-item"><span class="t-ico">📝</span><div><b data-en="Written Contract Is Signed">Likhit Contract Sign Hota Hai</b><span data-en="A written agreement before every deal — so there is zero scope for fraud.">Har deal se pehle written agreement — taaki fraud ki koi gunjaish hi na rahe.</span></div></div>
+        <div class="trust-item"><span class="t-ico">📄</span><div><b>Terms &amp; Conditions Apply</b><span data-en="T&amp;C apply to every deal — everything in writing upfront, no verbal promises.">Har deal par T&amp;C laagu hoti hain — sab kuch pehle likhit mein, koi zubaani waada nahi.</span></div></div>
+        <div class="trust-item"><span class="t-ico">💰</span><div><b data-en="Commission FIXED — Noted in Contract">Commission FIX — Contract Mein Note</b><span data-en="Commission is fixed as per the property and written into the contract conditions. Fully transparent.">Commission property ke according fix hota hai aur contract ki conditions mein likha jata hai. Fully transparent.</span></div></div>
       </div>
     </div>
   </div>
@@ -572,23 +575,23 @@
 <section id="testimonials">
   <div class="container">
     <div class="sec-head">
-      <span class="badge">Khush Customers</span>
-      <h2>Customers Kya <span class="gold">Kehte Hain</span></h2>
+      <span class="badge" data-en="Happy Customers">Khush Customers</span>
+      <h2 data-en='What Customers <span class="gold">Say</span>'>Customers Kya <span class="gold">Kehte Hain</span></h2>
     </div>
     <div class="testi-grid">
       <div class="testi">
         <div class="stars">★★★★★</div>
-        <p>"Society mein plot liya tha inke through. Saare documents pehle dikhaye, registry bhi time par ho gayi. Bahut hi transparent dealing."</p>
+        <p data-en='"Bought a society plot through them. All documents were shown upfront and the registry happened on time. Very transparent dealing."'>"Society mein plot liya tha inke through. Saare documents pehle dikhaye, registry bhi time par ho gayi. Bahut hi transparent dealing."</p>
         <div class="who"><span class="avatar">R</span><div><b>Rajesh Kumar</b><span>Plot Buyer, Greater Noida</span></div></div>
       </div>
       <div class="testi">
         <div class="stars">★★★★★</div>
-        <p>"Apna purana makaan bechna tha. Inhone 15 din mein achha buyer dilwa diya, market rate se bhi accha daam mila. Highly recommended!"</p>
+        <p data-en='"Had to sell my old house. They found a good buyer within 15 days and I got better than market rate. Highly recommended!"'>"Apna purana makaan bechna tha. Inhone 15 din mein achha buyer dilwa diya, market rate se bhi accha daam mila. Highly recommended!"</p>
         <div class="who"><span class="avatar">S</span><div><b>Sunita Devi</b><span>Property Seller, Aligarh</span></div></div>
       </div>
       <div class="testi">
         <div class="stars">★★★★★</div>
-        <p>"Jewar airport ke paas investment ke liye plot chahiye tha. Inki salah par liya — 2 saal mein value almost double ho gayi. Genuine advice milti hai."</p>
+        <p data-en='"Wanted a plot near Jewar airport for investment. Bought on their advice — the value nearly doubled in 2 years. Genuine advice."'>"Jewar airport ke paas investment ke liye plot chahiye tha. Inki salah par liya — 2 saal mein value almost double ho gayi. Genuine advice milti hai."</p>
         <div class="who"><span class="avatar">A</span><div><b>Amit Verma</b><span>Investor, Jewar</span></div></div>
       </div>
     </div>
@@ -599,25 +602,25 @@
 <section class="contact" id="contact">
   <div class="container contact-wrap">
     <div class="contact-info">
-      <span class="badge">Contact Karein</span>
-      <h2 style="margin-top:14px">Aaj Hi Baat Karein, <span class="gold">Deal Pakki Karein</span></h2>
-      <p>Plot chahiye, property bechni hai, ya sirf rate poochna hai — bina jhijhak call ya WhatsApp karein. Hum turant reply karte hain.</p>
+      <span class="badge" data-en="Contact Us">Contact Karein</span>
+      <h2 style="margin-top:14px" data-en='Talk Today, <span class="gold">Seal the Deal</span>'>Aaj Hi Baat Karein, <span class="gold">Deal Pakki Karein</span></h2>
+      <p data-en="Need a plot, selling property, or just asking rates — call or WhatsApp without hesitation. We reply fast.">Plot chahiye, property bechni hai, ya sirf rate poochna hai — bina jhijhak call ya WhatsApp karein. Hum turant reply karte hain.</p>
       <div class="c-line"><span class="ico">📞</span><div><b>+91 96752 28696</b><span>Call / WhatsApp — 10 AM to 5 PM</span></div></div>
       <div class="c-line"><span class="ico">📍</span><div><b>Khair, Aligarh — 202138</b><span>Working Areas: Aligarh · Greater Noida · Jewar · Yamuna Expressway</span></div></div>
-      <div class="c-line"><span class="ico">✉️</span><div><b>aditya@h3-staffing.com</b><span>Email par bhi inquiry bhej sakte hain</span></div></div>
-      <div class="c-line"><span class="ico">🕒</span><div><b>Working Hours</b><span>Roz subah 10 baje se shaam 5 baje tak</span></div></div>
+      <div class="c-line"><span class="ico">✉️</span><div><b>aditya@h3-staffing.com</b><span data-en="You can also send inquiries by email">Email par bhi inquiry bhej sakte hain</span></div></div>
+      <div class="c-line"><span class="ico">🕒</span><div><b>Working Hours</b><span data-en="Daily 10 AM to 5 PM">Roz subah 10 baje se shaam 5 baje tak</span></div></div>
       <div class="hero-btns" style="margin-top:26px">
         <a class="btn btn-wa" href="https://wa.me/919675228696?text=Namaste!%20Property%20ke%20baare%20mein%20baat%20karni%20hai." target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a class="btn btn-gold" href="tel:+919675228696">📞 Call Karein</a>
+        <a class="btn btn-gold" href="tel:+919675228696" data-en="📞 Call Now">📞 Call Karein</a>
       </div>
     </div>
 
     <form id="inquiryForm">
       <h3>📝 Free Inquiry Form</h3>
-      <p class="fp">Apni requirement bhejein — hum 24 ghante mein contact karenge.</p>
+      <p class="fp" data-en="Send your requirement — we will contact you within 24 hours.">Apni requirement bhejein — hum 24 ghante mein contact karenge.</p>
       <div class="field-row">
         <div class="field">
-          <label for="fname">Aapka Naam *</label>
+          <label for="fname" data-en="Your Name *">Aapka Naam *</label>
           <input id="fname" type="text" placeholder="e.g. Rahul Sharma" required>
         </div>
         <div class="field">
@@ -626,13 +629,13 @@
         </div>
       </div>
       <div class="field">
-        <label for="ftype">Kya Chahiye?</label>
+        <label for="ftype" data-en="What Do You Need?">Kya Chahiye?</label>
         <select id="ftype">
-          <option>Residential Plot chahiye</option>
-          <option>Society area mein plot chahiye</option>
-          <option>Makaan / House kharidna hai</option>
-          <option>Apni property bechni hai</option>
-          <option>Investment ke liye salah chahiye</option>
+          <option data-en="Need a residential plot">Residential Plot chahiye</option>
+          <option data-en="Plot in a society area">Society area mein plot chahiye</option>
+          <option data-en="Want to buy a house">Makaan / House kharidna hai</option>
+          <option data-en="Want to sell my property">Apni property bechni hai</option>
+          <option data-en="Need investment advice">Investment ke liye salah chahiye</option>
         </select>
       </div>
       <div class="field">
@@ -645,7 +648,7 @@
           <option>Tappal / Khair Road</option>
           <option>Jattari</option>
           <option>Gonda / Iglas (Aligarh)</option>
-          <option>Koi bhi — best deal dikhao</option>
+          <option data-en="Any — show me the best deal">Koi bhi — best deal dikhao</option>
         </select>
       </div>
       <div class="field">
@@ -659,10 +662,10 @@
       </div>
       <div class="field">
         <label for="fmsg">Message (optional)</label>
-        <textarea id="fmsg" rows="3" placeholder="Location, size, ya koi aur detail..."></textarea>
+        <textarea id="fmsg" rows="3" placeholder="Location, size, ya koi aur detail..." data-en-ph="Location, size, or any other detail..."></textarea>
       </div>
-      <button class="btn btn-gold" type="submit">🚀 Inquiry Bhejein</button>
-      <p class="form-note">Form submit karne par aapki detail seedha WhatsApp par hamein aayegi.</p>
+      <button class="btn btn-gold" type="submit" data-en="🚀 Send Inquiry">🚀 Inquiry Bhejein</button>
+      <p class="form-note" data-en="On submit, your details reach us directly on WhatsApp.">Form submit karne par aapki detail seedha WhatsApp par hamein aayegi.</p>
     </form>
   </div>
 </section>
@@ -673,7 +676,7 @@
     <div class="foot">
       <div>
         <a href="#home" class="logo"><span class="mark">🏠</span><span>Munesh <span class="gold">Properties</span><small>Trusted Property Dealer</small></span></a>
-        <p>Aligarh, Pari Chowk (Greater Noida), Jewar aur Yamuna Expressway belt mein plots, society properties aur buy/sell deals ke liye aapka bharosemand saathi.</p>
+        <p data-en="Your trusted partner for plots, society properties and buy/sell deals across Aligarh, Pari Chowk (Greater Noida), Jewar and the Yamuna Expressway belt.">Aligarh, Pari Chowk (Greater Noida), Jewar aur Yamuna Expressway belt mein plots, society properties aur buy/sell deals ke liye aapka bharosemand saathi.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -703,7 +706,7 @@
         </ul>
       </div>
     </div>
-    <div class="copy">© 2026 Munesh Properties, Khair (Aligarh). All rights reserved. | Registered Company · Har Deal Par Likhit Agreement · Fixed Commission · T&amp;C Apply</div>
+    <div class="copy" data-en="© 2026 Munesh Properties, Khair (Aligarh). All rights reserved. | Registered Company · Written Agreement on Every Deal · Fixed Commission · T&amp;C Apply">© 2026 Munesh Properties, Khair (Aligarh). All rights reserved. | Registered Company · Har Deal Par Likhit Agreement · Fixed Commission · T&amp;C Apply</div>
   </div>
 </footer>
 
@@ -711,12 +714,12 @@
 <div class="chatbox" id="chatbox">
   <div class="cb-head">
     <span class="cb-av">🤖</span>
-    <div><b>Munesh Properties Assistant</b><span class="st">Online — turant jawab</span></div>
+    <div><b>Munesh Properties Assistant</b><span class="st" data-en="Online — instant replies">Online — turant jawab</span></div>
     <button class="cb-close" onclick="toggleChat(false)" aria-label="Close chat">✕</button>
   </div>
   <div class="cb-body" id="cbBody"></div>
   <div class="cb-foot">
-    <input id="cbInput" type="text" placeholder="Apna sawaal likhein..." autocomplete="off">
+    <input id="cbInput" type="text" placeholder="Apna sawaal likhein..." data-en-ph="Type your question..." autocomplete="off">
     <button id="cbSend" aria-label="Send">➤</button>
   </div>
 </div>
@@ -733,6 +736,25 @@
 </div>
 
 <script>
+  /* ================= LANGUAGE TOGGLE ================= */
+  var siteLang = 'hi';
+  try { siteLang = localStorage.getItem('siteLang') || 'hi'; } catch(e){}
+  function setLang(lang){
+    siteLang = lang;
+    try { localStorage.setItem('siteLang', lang); } catch(e){}
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(!el.dataset.hi) el.dataset.hi = el.innerHTML;
+      el.innerHTML = (lang === 'en') ? el.dataset.en : el.dataset.hi;
+    });
+    document.querySelectorAll('[data-en-ph]').forEach(function(el){
+      if(!el.dataset.hiPh) el.dataset.hiPh = el.placeholder;
+      el.placeholder = (lang === 'en') ? el.dataset.enPh : el.dataset.hiPh;
+    });
+    var b = document.getElementById('langBtn');
+    if(b) b.textContent = (lang === 'en') ? 'हिंदी' : 'EN';
+    document.documentElement.lang = (lang === 'en') ? 'en' : 'hi';
+  }
+
   // Inquiry form → opens WhatsApp with pre-filled details
   document.getElementById('inquiryForm').addEventListener('submit', function(e){
     e.preventDefault();
@@ -771,7 +793,7 @@
       chips:['Plot kharidna hai','Jewar airport ke paas plot','Property bechni hai','Rate kya chal raha hai?']
     },
     {
-      id:'plot', kw:['plot','zameen','jameen','land','kharidna','kharid','buy','lena hai','chahiye plot'],
+      id:'plot', kw:['plot','zameen','jameen','land','kharidna','kharid','buy','lena hai','chahiye plot','house','makaan'],
       a:'Bilkul sahi jagah aaye hain! 👍 Hamare paas ye options hain:\n\n📐 Residential plots — 50 se 500 sq. yd. tak\n🏘️ Society area plots — gated, bijli-paani ke saath\n✈️ Jewar airport ke paas — investment ke liye best\n🛣️ Yamuna Expressway belt — highway touch\n📍 Aligarh & Khair Road — budget-friendly\n\nSaare plots clear title aur registry-ready hote hain. Kaunsa area dekhna chahenge?',
       chips:['Jewar mein kya rate hai?','Aligarh mein plot','Yamuna Expressway plots','Site visit karna hai']
     },
@@ -796,7 +818,7 @@
       chips:['Plots dikhao','Makaan chahiye','Rate kya hai?','Office kahan hai?']
     },
     {
-      id:'price', kw:['rate','price','daam','kitna','kitne','cost','kimat','keemat','paisa','sasta','mehnga'],
+      id:'price', kw:['rate','price','daam','kitna','kitne','cost','kimat','keemat','paisa','sasta','mehnga','budget'],
       a:'Rates area ke hisaab se alag hote hain 💰 (approx.):\n\n✈️ Jewar (airport ke paas): ₹10-15 Lakh / 100 sq. yd.\n🛣️ Yamuna Expressway belt: ₹12-18 Lakh / 100 sq. yd.\n🏘️ Greater Noida society: ₹15-25 Lakh / 100 sq. yd.\n📍 Aligarh / Khair: ₹5-10 Lakh / 100 sq. yd.\n\nExact rate plot ki location aur road-width par depend karta hai. Sahi quote ke liye WhatsApp karein — koi hidden charge nahi, jo rate bataya wahi final!',
       chips:['Jewar ki detail','Aligarh ki detail','Loan mil sakta hai?','WhatsApp par baat karein']
     },
@@ -811,7 +833,7 @@
       chips:['Makaan ki detail','Plot ki detail','Site visit karna hai']
     },
     {
-      id:'budget_high', kw:['50 lakh se upar','1 crore','crore','bada plot','commercial'],
+      id:'budget_high', kw:['50 lakh se upar','1 crore','crore','bada plot','commercial','above 50'],
       a:'₹50 Lakh+ budget mein premium options milenge! ✨\n\n• Greater Noida mein bade society plots (300-500 sq. yd.)\n• Pari Chowk ke paas commercial spaces\n• Yamuna Expressway par bulk/investment land\n• Jewar mein bade investment plots — airport boom se pehle\n\nIs range ki deals personal attention ke saath hoti hain — seedha call karein: ' + PHONE_TXT,
       chips:['Call karna hai','Commercial property','Investment advice']
     },
@@ -821,12 +843,12 @@
       chips:['Registry ka kharcha kitna?','Kaunse documents chahiye?','Plot dekhna hai']
     },
     {
-      id:'reg_cost', kw:['registry ka kharcha','stamp duty','registration fee','kharcha kitna'],
+      id:'reg_cost', kw:['registry ka kharcha','stamp duty','registration fee','kharcha kitna','registry cost'],
       a:'Registry ka kharcha (UP mein, approx.):\n\n• Stamp duty: property value ka 7% (mahila ke naam par 6% — ₹10 Lakh tak ki chhoot)\n• Registration fee: 1%\n\nMatlab ₹12 Lakh ke plot par lagbhag ₹95,000 ka sarkari kharcha. Hum sab kuch pehle calculate karke bata dete hain — koi surprise nahi. Exact figure ke liye WhatsApp karein!',
       chips:['WhatsApp par baat karein','Kaunse documents chahiye?','Loan mil sakta hai?']
     },
     {
-      id:'docs', kw:['kaunse document','documents chahiye','kya kagaz','aadhar','pan'],
+      id:'docs', kw:['kaunse document','documents chahiye','kya kagaz','aadhar','pan','documents needed','which documents'],
       a:'Plot kharidne ke liye aapko bas ye chahiye: 🪪\n\n• Aadhar Card\n• PAN Card\n• 2 passport-size photo\n• Payment ka proof\n\nBaaki saara kaam — title check, agreement, registry draft, stamp paper — hum handle karte hain. Aapko sirf sign karna hai!',
       chips:['Registry ka kharcha?','Plot dekhna hai','Call karna hai']
     },
@@ -836,7 +858,7 @@
       chips:['Jewar dekhna hai','Aligarh dekhna hai','Expressway plots dekhne hain']
     },
     {
-      id:'sell', kw:['bechna','bechni','sell','sale karna','apni property','meri property','mera plot','mera makaan'],
+      id:'sell', kw:['bechna','bechni','sell','sale karna','apni property','meri property','mera plot','mera makaan','valuation'],
       a:'Apni property bechna chahte hain? Hum best rate dilwate hain! 🤝\n\n1️⃣ WhatsApp par property ki detail + photos bhejein\n2️⃣ Hum free market valuation batayenge\n3️⃣ Genuine buyers se milwayenge (average 15-30 din)\n4️⃣ Registry tak ka saara process hum sambhalenge\n\nKoi advance fee nahi — deal hone par hi commission. Detail bhejne ke liye: <a href="' + WA + '?text=Apni%20property%20bechni%20hai" target="_blank">yahan click karein</a>',
       chips:['Valuation kaise hoti hai?','Commission kitna?','Call karna hai']
     },
@@ -866,12 +888,12 @@
       chips:['EMI kitni banegi?','Kaunse documents chahiye?','WhatsApp karein']
     },
     {
-      id:'emi', kw:['emi kitni','kist kitni','monthly'],
+      id:'emi', kw:['emi kitni','kist kitni','monthly','emi be'],
       a:'EMI loan amount, interest rate aur tenure par depend karti hai. Rough idea:\n\n₹10 Lakh ka loan, 9% par, 10 saal ke liye → lagbhag ₹12,700/mahina\n₹20 Lakh ka loan, 9% par, 15 saal ke liye → lagbhag ₹20,300/mahina\n\nExact calculation aur bank options ke liye call karein: ' + PHONE_TXT,
       chips:['Loan ki detail','Plot kharidna hai','Call karna hai']
     },
     {
-      id:'contact', kw:['contact','number','phone','call','mobile','baat','office','address','kahan ho','kahan hai','location','email','timing','samay','khula','hours','kab tak'],
+      id:'contact', kw:['contact','number','phone','call','mobile','baat','office','address','kahan ho','kahan hai','location','email','timing','samay','khula','hours','kab tak','whatsapp'],
       a:'Hum se aise sampark karein: 📞\n\n📱 Call / WhatsApp: ' + PHONE_TXT + '\n📍 Address: Khair, Aligarh — 202138\n✉️ Email: aditya@h3-staffing.com\n🕒 Working hours: roz subah 10 baje se shaam 5 baje tak\n\nWorking areas: Aligarh · Khair · Jattari · Gonda · Iglas · Tappal · Jewar · Yamuna Expressway · Greater Noida\n\n<a href="' + WA + '?text=Namaste!%20Property%20ke%20baare%20mein%20baat%20karni%20hai." target="_blank">WhatsApp par abhi message karein</a>',
       chips:['Plot kharidna hai','Property bechni hai','Site visit karna hai']
     },
@@ -888,9 +910,42 @@
   ];
 
   var FALLBACK = {
+    id:'fb',
     a:'Hmm, is sawaal ka exact jawab mere paas nahi hai. 🤔\nLekin fikar mat kijiye — hamari team har sawaal ka jawab degi!\n\n<a href="' + WA + '?text=Website%20chatbot%20se%20aaya%20hoon%2C%20ek%20sawaal%20hai" target="_blank">WhatsApp par abhi poochein</a> ya call karein: ' + PHONE_TXT,
     chips:['Plot kharidna hai','Rate kya hai?','Registry ki jaankari','Site visit karna hai']
   };
+
+  // English versions of bot answers & chips, keyed by intent id
+  var EN_BOT = {
+    greet:{a:'Namaste! 🙏 I\'m the Munesh Properties assistant.\nPlots, houses, investment, registry — ask me anything. What would you like to know?', c:['Want to buy a plot','Plot near Jewar airport','Want to sell property','What are the rates?']},
+    plot:{a:'You\'re at the right place! 👍 We offer:\n\n📐 Residential plots — 50 to 500 sq. yd.\n🏘️ Society-area plots — gated, with utilities\n✈️ Near Jewar airport — best for investment\n🛣️ Yamuna Expressway belt — highway touch\n📍 Aligarh & Khair Road — budget friendly\n\nAll plots come with clear title, registry-ready. Which area would you like to explore?', c:['Rates in Jewar?','Plot in Aligarh','Yamuna Expressway plots','Book a site visit']},
+    jewar:{a:'Jewar is UP\'s hottest investment area right now! ✈️\n\nDemand near Noida International Airport is rising fast. With the airport, film city and new expressways, strong growth is expected in the coming years.\n\nWe have verified plots 10-20 min from the airport, starting ₹10-12 Lakh (100 sq. yd.). Want details on WhatsApp?', c:['Yes, send on WhatsApp','What are the rates?','Will registry happen?','Book a site visit']},
+    yamuna:{a:'The Yamuna Expressway belt is a great investment area! 🛣️\n\nSectors developing along the Delhi-Agra expressway, proximity to Jewar airport, and Yamuna Authority projects make this area a goldmine.\n\nCorner plots on the Tappal side start at ₹26 Lakh (200 sq. yd.). WhatsApp us for more options!', c:['Corner plot details','Plot near Jewar airport','Investment advice','Talk on WhatsApp']},
+    noida:{a:'In Greater Noida / Pari Chowk we deal in both society plots and flats. 🏘️\n\nVerified options in Alpha, Beta, Gamma sectors and nearby societies — close to metro, university and Pari Chowk market.\n\nWhat\'s your budget? I\'ll suggest the best options.', c:['₹10-25 Lakh budget','₹25-50 Lakh budget','Above 50 Lakh','Send list on WhatsApp']},
+    aligarh:{a:'Aligarh is our home ground! 🏠 Our office is in Khair.\n\nPlots and houses available on Ramghat Road, Khair Road and nearby areas. Aligarh rates are budget-friendly and the Defence Corridor promises strong future growth.\n\n2 BHK houses from ₹32 Lakh, plots for even less. What would you like to see?', c:['Show plots','Want to buy a house','What are the rates?','Where is the office?']},
+    price:{a:'Rates vary by area 💰 (approx.):\n\n✈️ Jewar (near airport): ₹10-15 Lakh / 100 sq. yd.\n🛣️ Yamuna Expressway belt: ₹12-18 Lakh / 100 sq. yd.\n🏘️ Greater Noida society: ₹15-25 Lakh / 100 sq. yd.\n📍 Aligarh / Khair: ₹5-10 Lakh / 100 sq. yd.\n\nExact rate depends on location and road width. WhatsApp us for a firm quote — no hidden charges, the quoted rate is final!', c:['Jewar details','Aligarh details','Can I get a loan?','Talk on WhatsApp']},
+    budget_low:{a:'Great options in ₹10-25 Lakh! 👌\n\n• 100 sq. yd. near Jewar airport — from ₹12 Lakh\n• 150-200 sq. yd. in Aligarh/Khair — ₹10-20 Lakh\n• 100 sq. yd. on the Yamuna Expressway belt — from ₹15 Lakh\n\nBuying a plot in this range is a smart move for the future. Site visits are free!', c:['Book a site visit','Registry cost?','Send photos on WhatsApp']},
+    budget_mid:{a:'₹25-50 Lakh gives you excellent options! 💪\n\n• Yamuna Expressway corner plot 200 sq. yd. — ₹26 Lakh\n• 2 BHK independent house in Aligarh — ₹32 Lakh\n• Greater Noida society plot 150-200 sq. yd. — ₹30-45 Lakh\n\nHouse or plot — I\'ll get you the best deal!', c:['House details','Plot details','Book a site visit']},
+    budget_high:{a:'Premium options for ₹50 Lakh+! ✨\n\n• Large society plots in Greater Noida (300-500 sq. yd.)\n• Commercial spaces near Pari Chowk\n• Bulk/investment land on Yamuna Expressway\n• Large plots in Jewar — before the airport boom peaks\n\nDeals in this range get personal attention — call us directly: ' + PHONE_TXT, c:['I want to call','Commercial property','Investment advice']},
+    registry:{a:'Don\'t worry about paperwork — that\'s our specialty! 📄\n\n✅ Every plot\'s title is verified first\n✅ Registry at government rates, no extra charge\n✅ Full clarity on stamp duty & fees upfront\n✅ Support with mutation too\n✅ All documents shown to you first\n\n1000+ registries in 15+ years — zero fraud. You are completely safe!', c:['Registry cost?','Which documents needed?','Want to see a plot']},
+    reg_cost:{a:'Registry costs (in UP, approx.):\n\n• Stamp duty: 7% of property value (6% in a woman\'s name — rebate up to ₹10 Lakh)\n• Registration fee: 1%\n\nSo a ₹12 Lakh plot costs about ₹95,000 in government charges. We calculate everything upfront — no surprises. WhatsApp us for exact figures!', c:['Talk on WhatsApp','Which documents needed?','Can I get a loan?']},
+    docs:{a:'To buy a plot you just need: 🪪\n\n• Aadhar Card\n• PAN Card\n• 2 passport-size photos\n• Payment proof\n\nEverything else — title check, agreement, registry draft, stamp paper — we handle. You only sign!', c:['Registry cost?','Want to see a plot','I want to call']},
+    visit:{a:'Site visits are completely FREE! 🚗\n\nSee the plot yourself, check the boundary, understand the area — then decide at ease. No pressure.\n\n🕒 Visit timing: daily 10 AM to 5 PM\n\nTo book, send your name and preferred area on WhatsApp: <a href="' + WA + '?text=I%20want%20to%20book%20a%20site%20visit" target="_blank">Book on WhatsApp</a>', c:['Visit Jewar','Visit Aligarh','See Expressway plots']},
+    sell:{a:'Want to sell your property? We get you the best rate! 🤝\n\n1️⃣ Send property details + photos on WhatsApp\n2️⃣ We give a free market valuation\n3️⃣ We connect genuine buyers (15-30 days avg.)\n4️⃣ We handle the whole process till registry\n\nNo advance fee — commission only when the deal closes. <a href="' + WA + '?text=I%20want%20to%20sell%20my%20property" target="_blank">Click here to send details</a>', c:['How does valuation work?','How much commission?','I want to call']},
+    commission:{a:'Our commission system is fully transparent! 💯\n\n✅ Commission is FIXED as per the property\n✅ It\'s written into the contract conditions upfront\n✅ Charged only when the deal closes — no advance fee\n✅ No extra or hidden charges later\n\nWhat\'s written is what\'s charged. Call or WhatsApp for exact details: ' + PHONE_TXT, c:['What\'s the contract like?','Want to sell property','Want to buy a plot']},
+    contract:{a:'Great question! We are a registered company and everything is done legally. 🛡️\n\n📝 A written CONTRACT is signed before every deal — between both parties, so there\'s zero scope for fraud\n📄 Terms & Conditions apply to every deal — all in writing upfront\n💰 Commission is FIXED per property and noted in the contract\n✅ No verbal promises — whatever is agreed goes on paper\n\nThat\'s why you\'re 100% safe with Munesh Properties!', c:['How much commission?','Registry info','Want to buy a plot','I want to call']},
+    invest:{a:'Best areas to invest right now: 📈\n\n1️⃣ Jewar — rates rising since the airport opened, but still a good entry point\n2️⃣ Yamuna Expressway belt — Film City & industrial projects coming\n3️⃣ Tappal/Khair Road — low budget, long-term winner\n\nJewar plot values have nearly doubled in 2 years. With 15+ years of experience, I\'ll help you pick the right plot!', c:['Invest in Jewar','What budget is needed?','What\'s the risk?']},
+    risk:{a:'Great question! Property risk exists only when the title isn\'t clear or paperwork is incomplete. 🛡️\n\nOur guarantees:\n✅ We are a registered company\n✅ Written contract signed on every deal — with T&C\n✅ Only clear-title, verified plots\n✅ All documents shown upfront\n✅ Registry through the official process\n✅ 1000+ happy families, 15+ year track record\n\nYou can even talk to our past customers first!', c:['What\'s the registry process?','Book a site visit','I want to call']},
+    loan:{a:'Yes, financing options are available! 🏦\n\n• For houses: bank home loans are easy — we help with documents\n• For plots: some banks offer plot loans (slightly lower LTV)\n• Some projects: seller-side installment plans available\n\nWhatsApp or call us for the best option for your situation: ' + PHONE_TXT, c:['What will the EMI be?','Which documents needed?','Talk on WhatsApp']},
+    emi:{a:'EMI depends on loan amount, interest rate and tenure. Rough idea:\n\n₹10 Lakh loan, 9%, 10 years → about ₹12,700/month\n₹20 Lakh loan, 9%, 15 years → about ₹20,300/month\n\nCall us for exact calculations and bank options: ' + PHONE_TXT, c:['Loan details','Want to buy a plot','I want to call']},
+    contact:{a:'Reach us here: 📞\n\n📱 Call / WhatsApp: ' + PHONE_TXT + '\n📍 Address: Khair, Aligarh — 202138\n✉️ Email: aditya@h3-staffing.com\n🕒 Working hours: daily 10 AM to 5 PM\n\nWorking areas: Aligarh · Khair · Jattari · Gonda · Iglas · Tappal · Jewar · Yamuna Expressway · Greater Noida\n\n<a href="' + WA + '?text=Hello!%20I%20want%20to%20talk%20about%20property." target="_blank">Message us on WhatsApp now</a>', c:['Want to buy a plot','Want to sell property','Book a site visit']},
+    thanks:{a:'Thank you! 🙏 Ask anytime if you have more questions.\n\nWhenever you need a plot or property — remember Munesh Properties! 🏠\n📞 ' + PHONE_TXT, c:['Want to buy a plot','What are the rates?','Contact details']},
+    bye:{a:'Goodbye! 👋 Have a great day.\n\nWhenever property comes to mind — call 📞 ' + PHONE_TXT + '. Munesh Properties, always at your service!', c:['One more question']},
+    fb:{a:'Hmm, I don\'t have an exact answer for that. 🤔\nBut don\'t worry — our team will answer every question!\n\n<a href="' + WA + '?text=Coming%20from%20the%20website%20chatbot%2C%20I%20have%20a%20question" target="_blank">Ask on WhatsApp now</a> or call: ' + PHONE_TXT, c:['Want to buy a plot','What are the rates?','Registry info','Book a site visit']}
+  };
+
+  function tA(it){ var o = (siteLang === 'en') && EN_BOT[it.id]; return o ? o.a : it.a; }
+  function tC(it){ var o = (siteLang === 'en') && EN_BOT[it.id]; return o ? o.c : it.chips; }
 
   var cbBody = document.getElementById('cbBody');
   var cbInput = document.getElementById('cbInput');
@@ -902,7 +957,7 @@
     box.classList.toggle('open', open);
     if(open && !chatOpened){
       chatOpened = true;
-      botReply(INTENTS[0].a, INTENTS[0].chips, 400);
+      botReply(tA(INTENTS[0]), tC(INTENTS[0]), 400);
     }
     if(open) cbInput.focus();
   }
@@ -965,11 +1020,14 @@
     if(old.length) old[old.length-1].remove();
     addMsg(text, 'user');
     var it = matchIntent(text);
-    botReply(it.a, it.chips);
+    botReply(tA(it), tC(it));
   }
 
   document.getElementById('cbSend').addEventListener('click', function(){ userSend(); });
   cbInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') userSend(); });
+
+  // Apply saved language on page load
+  if(siteLang === 'en') setLang('en');
 </script>
 </body>
 </html>
