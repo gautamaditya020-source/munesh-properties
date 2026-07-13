@@ -274,7 +274,7 @@
       </ul>
     </nav>
     <a class="nav-call" href="tel:+919675228696" data-en="📞 Call Now">📞 कॉल करें</a>
-    <button class="lang-btn" id="langBtn" onclick="setLang(siteLang==='en'?'hi':'en')" aria-label="Change language">EN</button>
+    <button class="lang-btn" id="langBtn" onclick="setLang(siteLang==='en'?'hi':'en')" aria-label="Change language">English</button>
     <button class="menu-btn" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
   </div>
 </header>
@@ -324,15 +324,16 @@
   <div class="container">
     <div class="label" data-en="✦ Our Working Areas ✦">✦ हमारे कार्य क्षेत्र ✦</div>
     <div class="chip-row">
+      <a class="chip" href="#contact" data-en="📍 Khair">📍 खैर</a>
       <a class="chip" href="#contact" data-en="📍 Aligarh">📍 अलीगढ़</a>
-      <a class="chip" href="#contact" data-en="📍 Pari Chowk, Greater Noida">📍 परी चौक, ग्रेटर नोएडा</a>
-      <a class="chip" href="#contact" data-en="📍 Greater Noida (Alpha–Gamma)">📍 ग्रेटर नोएडा (अल्फा–गामा)</a>
-      <a class="chip" href="#contact" data-en="✈️ Jewar — Noida Intl. Airport">✈️ जेवर — नोएडा इंटरनेशनल एयरपोर्ट</a>
-      <a class="chip" href="#contact" data-en="🛣️ Yamuna Expressway Belt">🛣️ यमुना एक्सप्रेसवे बेल्ट</a>
-      <a class="chip" href="#contact" data-en="📍 Tappal &amp; Khair Road">📍 टप्पल और खैर रोड</a>
       <a class="chip" href="#contact" data-en="📍 Jattari">📍 जट्टारी</a>
       <a class="chip" href="#contact" data-en="📍 Gonda (Aligarh)">📍 गोंडा (अलीगढ़)</a>
       <a class="chip" href="#contact" data-en="📍 Iglas">📍 इगलास</a>
+      <a class="chip" href="#contact" data-en="📍 Tappal">📍 टप्पल</a>
+      <a class="chip" href="#contact" data-en="✈️ Jewar — Noida Intl. Airport">✈️ जेवर — नोएडा इंटरनेशनल एयरपोर्ट</a>
+      <a class="chip" href="#contact" data-en="🛣️ Yamuna Expressway Belt">🛣️ यमुना एक्सप्रेसवे बेल्ट</a>
+      <a class="chip" href="#contact" data-en="📍 Pari Chowk, Greater Noida">📍 परी चौक, ग्रेटर नोएडा</a>
+      <a class="chip" href="#contact" data-en="📍 Greater Noida (Alpha–Gamma)">📍 ग्रेटर नोएडा (अल्फा–गामा)</a>
     </div>
   </div>
 </div>
@@ -606,7 +607,7 @@
       <h2 style="margin-top:14px" data-en='Talk Today, <span class="gold">Seal the Deal</span>'>आज ही बात करें, <span class="gold">डील पक्की करें</span></h2>
       <p data-en="Need a plot, selling property, or just asking rates — call or WhatsApp without hesitation. We reply fast.">प्लॉट चाहिए, प्रॉपर्टी बेचनी है, या सिर्फ़ रेट पूछना है — बिना झिझक कॉल या व्हाट्सऐप करें। हम तुरंत जवाब देते हैं।</p>
       <div class="c-line"><span class="ico">📞</span><div><b>+91 96752 28696</b><span data-en="Call / WhatsApp — 10 AM to 5 PM">कॉल / व्हाट्सऐप — सुबह 10 से शाम 5 बजे</span></div></div>
-      <div class="c-line"><span class="ico">📍</span><div><b data-en="Khair, Aligarh — 202138">खैर, अलीगढ़ — 202138</b><span data-en="Working Areas: Aligarh · Greater Noida · Jewar · Yamuna Expressway">कार्य क्षेत्र: अलीगढ़ · ग्रेटर नोएडा · जेवर · यमुना एक्सप्रेसवे</span></div></div>
+      <div class="c-line"><span class="ico">📍</span><div><b data-en="Khair, Aligarh — 202138">खैर, अलीगढ़ — 202138</b><span data-en="Working Areas: Khair · Aligarh · Jattari · Gonda · Iglas · Tappal · Jewar · Yamuna Expressway · Greater Noida">कार्य क्षेत्र: खैर · अलीगढ़ · जट्टारी · गोंडा · इगलास · टप्पल · जेवर · यमुना एक्सप्रेसवे · ग्रेटर नोएडा</span></div></div>
       <div class="c-line"><span class="ico">✉️</span><div><b>aditya@h3-staffing.com</b><span data-en="You can also send inquiries by email">ईमेल पर भी पूछताछ भेज सकते हैं</span></div></div>
       <div class="c-line"><span class="ico">🕒</span><div><b data-en="Working Hours">कार्य समय</b><span data-en="Daily 10 AM to 5 PM">रोज़ सुबह 10 बजे से शाम 5 बजे तक</span></div></div>
       <div class="hero-btns" style="margin-top:26px">
@@ -641,13 +642,14 @@
       <div class="field">
         <label for="floc" data-en="Preferred Location">पसंदीदा लोकेशन</label>
         <select id="floc">
+          <option data-en="Khair (Aligarh)">खैर (अलीगढ़)</option>
+          <option data-en="Aligarh">अलीगढ़</option>
+          <option data-en="Jattari">जट्टारी</option>
+          <option data-en="Gonda / Iglas (Aligarh)">गोंडा / इगलास (अलीगढ़)</option>
+          <option data-en="Tappal">टप्पल</option>
           <option data-en="Jewar — near Noida Intl. Airport">जेवर — नोएडा एयरपोर्ट के पास</option>
           <option data-en="Yamuna Expressway Belt">यमुना एक्सप्रेसवे बेल्ट</option>
           <option data-en="Pari Chowk / Greater Noida">परी चौक / ग्रेटर नोएडा</option>
-          <option data-en="Aligarh">अलीगढ़</option>
-          <option data-en="Tappal / Khair Road">टप्पल / खैर रोड</option>
-          <option data-en="Jattari">जट्टारी</option>
-          <option data-en="Gonda / Iglas (Aligarh)">गोंडा / इगलास (अलीगढ़)</option>
           <option data-en="Any — show me the best deal">कोई भी — बेस्ट डील दिखाओ</option>
         </select>
       </div>
@@ -690,10 +692,11 @@
       <div>
         <h4 data-en="Working Areas">कार्य क्षेत्र</h4>
         <ul>
-          <li><a href="#gallery" data-en="Aligarh">अलीगढ़</a></li>
-          <li><a href="#gallery" data-en="Pari Chowk, Greater Noida">परी चौक, ग्रेटर नोएडा</a></li>
+          <li><a href="#gallery" data-en="Khair, Aligarh">खैर, अलीगढ़</a></li>
+          <li><a href="#gallery" data-en="Jattari · Gonda · Iglas · Tappal">जट्टारी · गोंडा · इगलास · टप्पल</a></li>
           <li><a href="#gallery" data-en="Jewar — Noida Intl. Airport">जेवर — नोएडा इंटरनेशनल एयरपोर्ट</a></li>
           <li><a href="#gallery" data-en="Yamuna Expressway Belt">यमुना एक्सप्रेसवे बेल्ट</a></li>
+          <li><a href="#gallery" data-en="Pari Chowk, Greater Noida">परी चौक, ग्रेटर नोएडा</a></li>
         </ul>
       </div>
       <div>
@@ -751,7 +754,7 @@
       el.placeholder = (lang === 'en') ? el.dataset.enPh : el.dataset.hiPh;
     });
     var b = document.getElementById('langBtn');
-    if(b) b.textContent = (lang === 'en') ? 'हिंदी' : 'EN';
+    if(b) b.textContent = (lang === 'en') ? 'हिंदी' : 'English';
     document.documentElement.lang = (lang === 'en') ? 'en' : 'hi';
   }
 
@@ -894,7 +897,7 @@
     },
     {
       id:'contact', kw:['contact','number','phone','call','mobile','baat','office','address','kahan ho','kahan hai','location','email','timing','samay','khula','hours','kab tak','whatsapp','संपर्क','नंबर','फोन','कॉल','मोबाइल','बात','ऑफिस','पता','कहां','ईमेल','समय','खुला','व्हाट्सऐप'],
-      a:'हमसे ऐसे संपर्क करें: 📞\n\n📱 कॉल / व्हाट्सऐप: ' + PHONE_TXT + '\n📍 पता: खैर, अलीगढ़ — 202138\n✉️ ईमेल: aditya@h3-staffing.com\n🕒 कार्य समय: रोज़ सुबह 10 बजे से शाम 5 बजे तक\n\nकार्य क्षेत्र: अलीगढ़ · खैर · जट्टारी · गोंडा · इगलास · टप्पल · जेवर · यमुना एक्सप्रेसवे · ग्रेटर नोएडा\n\n<a href="' + WA + '?text=Namaste!%20Property%20ke%20baare%20mein%20baat%20karni%20hai." target="_blank">व्हाट्सऐप पर अभी संदेश करें</a>',
+      a:'हमसे ऐसे संपर्क करें: 📞\n\n📱 कॉल / व्हाट्सऐप: ' + PHONE_TXT + '\n📍 पता: खैर, अलीगढ़ — 202138\n✉️ ईमेल: aditya@h3-staffing.com\n🕒 कार्य समय: रोज़ सुबह 10 बजे से शाम 5 बजे तक\n\nकार्य क्षेत्र: खैर · अलीगढ़ · जट्टारी · गोंडा · इगलास · टप्पल · जेवर · यमुना एक्सप्रेसवे · ग्रेटर नोएडा\n\n<a href="' + WA + '?text=Namaste!%20Property%20ke%20baare%20mein%20baat%20karni%20hai." target="_blank">व्हाट्सऐप पर अभी संदेश करें</a>',
       chips:['प्लॉट खरीदना है','प्रॉपर्टी बेचनी है','साइट विज़िट करनी है']
     },
     {
@@ -938,7 +941,7 @@
     risk:{a:'Great question! Property risk exists only when the title isn\'t clear or paperwork is incomplete. 🛡️\n\nOur guarantees:\n✅ We are a registered company\n✅ Written contract signed on every deal — with T&C\n✅ Only clear-title, verified plots\n✅ All documents shown upfront\n✅ Registry through the official process\n✅ 1000+ happy families, 15+ year track record\n\nYou can even talk to our past customers first!', c:['What\'s the registry process?','Book a site visit','I want to call']},
     loan:{a:'Yes, financing options are available! 🏦\n\n• For houses: bank home loans are easy — we help with documents\n• For plots: some banks offer plot loans (slightly lower LTV)\n• Some projects: seller-side installment plans available\n\nWhatsApp or call us for the best option for your situation: ' + PHONE_TXT, c:['What will the EMI be?','Which documents needed?','Talk on WhatsApp']},
     emi:{a:'EMI depends on loan amount, interest rate and tenure. Rough idea:\n\n₹10 Lakh loan, 9%, 10 years → about ₹12,700/month\n₹20 Lakh loan, 9%, 15 years → about ₹20,300/month\n\nCall us for exact calculations and bank options: ' + PHONE_TXT, c:['Loan details','Want to buy a plot','I want to call']},
-    contact:{a:'Reach us here: 📞\n\n📱 Call / WhatsApp: ' + PHONE_TXT + '\n📍 Address: Khair, Aligarh — 202138\n✉️ Email: aditya@h3-staffing.com\n🕒 Working hours: daily 10 AM to 5 PM\n\nWorking areas: Aligarh · Khair · Jattari · Gonda · Iglas · Tappal · Jewar · Yamuna Expressway · Greater Noida\n\n<a href="' + WA + '?text=Hello!%20I%20want%20to%20talk%20about%20property." target="_blank">Message us on WhatsApp now</a>', c:['Want to buy a plot','Want to sell property','Book a site visit']},
+    contact:{a:'Reach us here: 📞\n\n📱 Call / WhatsApp: ' + PHONE_TXT + '\n📍 Address: Khair, Aligarh — 202138\n✉️ Email: aditya@h3-staffing.com\n🕒 Working hours: daily 10 AM to 5 PM\n\nWorking areas: Khair · Aligarh · Jattari · Gonda · Iglas · Tappal · Jewar · Yamuna Expressway · Greater Noida\n\n<a href="' + WA + '?text=Hello!%20I%20want%20to%20talk%20about%20property." target="_blank">Message us on WhatsApp now</a>', c:['Want to buy a plot','Want to sell property','Book a site visit']},
     thanks:{a:'Thank you! 🙏 Ask anytime if you have more questions.\n\nWhenever you need a plot or property — remember Munesh Properties! 🏠\n📞 ' + PHONE_TXT, c:['Want to buy a plot','What are the rates?','Contact details']},
     bye:{a:'Goodbye! 👋 Have a great day.\n\nWhenever property comes to mind — call 📞 ' + PHONE_TXT + '. Munesh Properties, always at your service!', c:['One more question']},
     fb:{a:'Hmm, I don\'t have an exact answer for that. 🤔\nBut don\'t worry — our team will answer every question!\n\n<a href="' + WA + '?text=Coming%20from%20the%20website%20chatbot%2C%20I%20have%20a%20question" target="_blank">Ask on WhatsApp now</a> or call: ' + PHONE_TXT, c:['Want to buy a plot','What are the rates?','Registry info','Book a site visit']}
